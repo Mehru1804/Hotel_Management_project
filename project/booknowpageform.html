@@ -1,0 +1,340 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkin-form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 15px 30px;
+            font-size: 17px;
+            padding: 8px;
+        }
+        .navbar{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(46, 46, 55) ;
+}
+.navbar,li,a,button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color:#edf0f1;
+    text-decoration: none; 
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+}
+.navlist{
+    list-style: none;
+}
+.navlist li{
+    display: inline-block;
+    padding:0px 20px;
+}
+.navlist li a{
+    transition:all 0.3s ease 0s;
+}
+.navlist li a:hover{
+    color: #0088a9;
+}
+.booknow1 {
+    display: inline-block;
+    background-color:rgba(42, 224, 224, 0.762);
+    border: 4px double transparent;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-left: 30px;
+  }
+  .booknow1 span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .booknow1:hover {
+    background-color:  rgba(239, 243, 21, 0.882);
+  }
+  .booknow1:hover span:after {
+    opacity: 1;
+    right: 0;
+  } 
+
+        .container{
+            background-color: #f2f2f2;
+            padding:5px 20px 15px 20px;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="password"],
+        input[type="tel"],
+        select,textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        fieldset{
+            background-color: #FFF;
+            border: 1PX SOLID #ccc;
+        }
+        .main-heading{
+            text-align: center;
+            background-color:rgba(42, 224, 224, 0.762) ;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        input[type="submit"],input[type="reset"]{
+            background-color: rgba(42, 224, 224, 0.762);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover{
+            background-color: rgba(224, 231, 13, 0.744);
+        }
+        input[type="reset"]:hover{
+            background-color: rgba(224, 231, 13, 0.744);
+        }   
+        .foot{
+    background-color:rgb(46, 46, 55);
+    text-align: center;
+    color: #fff;
+}
+.footemail input[type=submit]{
+    margin:18px;
+    padding: 5px;
+    background: var(--dark);
+    border:1px solid #fff;
+    background-color: rgba(42, 224, 224, 0.762);
+    width: 200px;
+}
+.footemail label,.footemail input{
+    width: 550px;
+}
+.footemail label{
+    font-weight: 600;
+    word-spacing: 5px;
+    padding-bottom: 8px;
+    margin-top: 30px;
+}
+.footemail input:not(#susbtn){
+    margin:4px 0 16px 0;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 17px;
+    border:none;
+}
+#susbtn{
+    position: relative;
+    background-color: #0088a9;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 2px;
+}
+.footemail{
+    padding: 20px;
+    margin: 20px;
+}
+#agree{
+    margin: 5px;
+    padding: 7px;
+    background-color: rgb(187, 187, 10);
+    border: none;
+    border-radius: 1px;
+}
+.footemail{
+    float: left;
+}
+.foot{
+    padding: 75px ;
+}
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+        <ul clASS="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+       </nav>
+       <a href="booknowpageform.html" CLASS="booknow1">BOOK NOW</a>
+       </div>
+    <div class="container">
+        <div class="form">
+            <form id="form">
+            <h1 CLASS="main-heading">Final Step</h1>
+            <hr>
+            <fieldset>
+            <legend>Enter Your Information</legend><br>
+            <label>First Name*</label>
+            <br>
+            <input type="text" name="fname" id="name" placeholder="Enter Your First Name" required>
+            <br><br>
+            <label>Last Name</label>
+            <br>
+            <input type="text" name="lname" id="name" placeholder="Enter Your Last Name">
+            <br><br>
+            <label>Enter Your Age: </label>
+            <br>
+            <input type="number" name="age" id="name" placeholder="How old are you?">
+            <br><br>
+            <label>Enter Your Address</label>
+            <br>
+            <textarea rows="3" cols="40"></textarea>
+            <br><br>
+            <label>Email :</label>
+            <br>
+            <input type="email" name="email" id="name" placeholder="Enter Your Valid Email">
+            <br><br>
+            <label for="mobile">Enter your phone number*:</label>
+            <br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+            <br><br>
+            <label>Enter your Id</label>
+            <br>
+            <input type="text" name="iname" id="name" placeholder="2A34BBCC6FF">
+            <br><br>
+            <label>Country</label>
+            <br>
+            <select name="country" size="1" multiple>
+                <option value="INDIA">INDIA</option>
+                <option value="BELGIUM">BELGIUM</option>
+                <option value="BANGLADESH">BANGLADESH</option>
+                <option value="BRAZIL">BRAZIL</option>
+                <option value="FRANCE">FRANCE</option>
+                <option value="BHUTAN">BHUTAN</option>
+                <option value="PAKISTAN">PAKISTAN</option>
+                <option value="CANNADA">CANNADA</option>
+                <option value="GERMANY">GERMANY</option>
+                <option value="ARGENTINA">ARGENTINA</option>
+                <option value="ARMENIA">ARMENIA</option>
+                <option value="INDONESIA">INDONESIA</option>
+                <option value="AFGHANISTAN">AFGHANISTAN</option>
+                <option value="IRAN">IRAN</option>
+                <option value="IRAQ">IRAQ</option>
+                <option value="AUSTRALIA">AUSTRALIA</option>
+                <option value="BENIN">BENIN</option>
+                <option value="CHINA">CHINA</option>
+                <option value="SOUTH KOREA">SOUTH KOREA</option>
+                <option value="NORTH KOREA">NORTG KOREA</option>
+                <option value="JAPAN">JAPAN</option>
+                <option value="EGYPT">EGYPT</option>
+                <option value="FINLAND">FINLAND</option>
+                <option value="GREECE">GREECE</option>
+                <option value="ICELAND">ICELAND</option>
+                <option value="ISRAEL">ISRAEL</option>
+                <option value="RUSSIA">RUSSIA</option>
+                <option value="UKRAIN">UKRAIN</option>
+                <option value="KUWAIT">KUWAIT</option>
+                <option value="OMAN">OMAN</option>
+                <option value="SAUDI ARABIA">SAUDI ARABIA</option>
+                <option value="MALAYSIA">MALAYSIA</option>
+                <option value="MEXICO">MEXIOC</option>
+                <option value="NEPAL">NEPAL</option>
+                <option value="NORWAY">NORWAY</option>
+                <option value="POLAND">POLAND</option>
+                <option value="SPAIN">SPAIN</option>
+                <option value="SWITZERLAND">SWITZERLAND</option>
+            </select>
+            <br><br>
+            <label for ="checkin-date">Check-In-Date:</label>
+            <input type="date" id="checkin-date">
+            <br><br>
+            <label for ="checkout-date">Check-Out-Date:</label>
+            <input type="date" id="checkout-date">
+            <br><br>
+            <label for= "adult">Adults:</label>
+            <input type="number" min="1" value="1" id="adult">
+            <br><br>
+            <label for ="children">Children:</label>
+            <input type="number" min="1" value="1" id="children">
+            <br><br>
+       
+            <label for ="rooms">Rooms:</label>
+            <input type="number"  min="1" value="1" id="rooms">
+            <br><br>
+            <label>Who are you Booking for?</label>
+            <br>
+            <input type="radio" id="option1" name="book4" value="option1">
+            <label>I am the main guest</label>
+            <br>
+            <input type="radio" id="option2" name="book4" value="option2">
+            <label>Booking is for someone else</label>
+            <br><br>
+            <input type="reset" class="btn2" value="Reset">
+            <br><br>
+            <input type="submit" class="btn1" value="Submit">
+            </fieldset>
+            <fieldset>
+                <legend>Payment Information</legend><br>
+                <p>Card Type
+                <select  name="card_type" id="card-type">
+                    <option value="">--Select a Card Type--</option>
+                    <option value="visa">VISA</option>
+                    <option value="rupay">Rupay</option>
+                    <option value="mastercard">Mastercard</option>
+                </select>
+                </p>
+                <p>
+                    Card Number<input type="number" name="card_number" id="card_number">
+                </p>
+                <p>
+                    Expiration Date: <input type="date" name="exp_date" id="exp_date">
+                </p>
+                <p>CVV <input type="password" name="cvv" id="cvv"></p>
+                <br>
+                <input type="submit" onclick="myfunction()" value="Pay Now">
+                </fieldset>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="foot">
+        <hr size="5" width="100%" color="white">
+        <div class="footemail">
+    <label style="font-family:'Times New Roman', Times, serif ;" for="email">Stay updated about our latest escapes, deals and offers, subscribe to our newsletter.</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter Your Email Address"><br>
+    <input id="susbtn" type="submit" value="subscribe newsletter">
+    </div>
+    <br>
+    <br>
+    
+    <a  style="margin: 10px;" href="about.html">About us</a>
+    <a style="margin: 10px;" href="contact.html">Contact us</a>
+
+    <p style="text-align: center ; padding: 10px;font-family: 'Times New Roman', Times, serif;">By using our site, you agree to the hotel's <span style="color: yellow;">Terms of service</span> and<span style="color: yellow;"> Privacy policy</span>.</p>
+    <button id="agree">I Agree</button>
+    </div>
+    <script>
+        function myfunction(){
+            alert("Thanks for Choosing us :)")
+        }
+    </script>
+</body>
+</html>
